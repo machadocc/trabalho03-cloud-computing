@@ -1,0 +1,13 @@
+services:
+  trabalho03-linux:
+    build: .
+    container_name: trabalho03-linux
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/app
+      - ./backups:/app/backups
+      - ./logs:/app/logs
+      - ./evidencias:/app/evidencias
+    tty: true
+    stdin_open: true
